@@ -11,15 +11,6 @@ public class StepTracker {
         }
     }
 
-    class MonthData {
-
-        int days[] = new int[30];
-
-        void saveSteps(int day, int steps) {
-            days[day - 1] = steps;
-        }
-    }
-
     void addSteps(int month, int day, int steps) {
             MonthData data = monthToData.get(month - 1);
                 data.saveSteps(day, steps);
@@ -76,4 +67,11 @@ public class StepTracker {
         }
     }
 }
+        class MonthData {
 
+            int days[] = new int[30];
+
+            void saveSteps(int day, int steps) {
+                days[day - 1] = steps;
+            }
+    }
